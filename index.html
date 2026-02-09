@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower Defense 3D</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        
+        #gameContainer {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        #ui {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            color: white;
+            padding: 20px;
+        }
+        
+        .ui-panel {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .tower-button {
+            padding: 10px 15px;
+            margin: 5px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .tower-button:hover {
+            background: #555;
+        }
+        
+        .tower-button.selected {
+            background: #0066cc;
+        }
+        
+        #gameStats {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        #waveInfo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 5px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <div id="ui">
+            <div class="ui-panel">
+                <div id="gameStats">
+                    <div class="stat">
+                        <div>Vida</div>
+                        <div id="health">100</div>
+                    </div>
+                    <div class="stat">
+                        <div>Dinheiro</div>
+                        <div id="money">500</div>
+                    </div>
+                    <div class="stat">
+                        <div>Pontos</div>
+                        <div id="score">0</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ui-panel">
+                <h3>Torres</h3>
+                <button class="tower-button" data-tower="basic">Torre Básica (50)</button>
+                <button class="tower-button" data-tower="cannon">Canhão (100)</button>
+                <button class="tower-button" data-tower="laser">Laser (150)</button>
+                <button class="tower-button" data-tower="freeze">Congelante (120)</button>
+            </div>
+            
+            <div class="ui-panel">
+                <button id="startWave" class="tower-button">Iniciar Wave</button>
+                <button id="pauseGame" class="tower-button">Pausar</button>
+                <button id="toggleAudio" class="tower-button">🔊 Som</button>
+                <button id="testAudio" class="tower-button">🎵 Teste</button>
+            </div>
+        </div>
+        
+        <div id="waveInfo">
+            <div>Wave: <span id="waveNumber">1</span></div>
+            <div>Inimigos: <span id="enemiesLeft">0</span></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/audioManager.js"></script>
+    <script src="js/gameState.js"></script>
+    <script src="js/enemy.js"></script>
+    <script src="js/tower.js"></script>
+    <script src="js/projectile.js"></script>
+    <script src="js/pathfinding.js"></script>
+    <script src="js/waveManager.js"></script>
+    <script src="js/gameMap.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/gameEngine.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
