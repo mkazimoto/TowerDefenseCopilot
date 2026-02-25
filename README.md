@@ -2,6 +2,9 @@
 
 Um jogo completo de Tower Defense em 3D desenvolvido com Three.js e JavaScript vanilla.
 
+<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/1181ff58-2bda-4dc7-8e5f-f7afedd281b1" />
+
+
 ## 🎮 Como Jogar
 
 1. **Objetivo**: Defenda sua base dos inimigos que aparecem em waves
@@ -161,5 +164,6 @@ O jogo foi projetado para ser facilmente modificável:
 - **Desktop**: Chrome, Firefox, Safari, Edge (versões recentes)
 - **Mobile**: Suporte básico (controles touch limitados)
 - **Requisitos**: Navegador com suporte a WebGL
+
 
 Divirta-se defendendo sua base! 🏰
