@@ -2,6 +2,8 @@
 
 Um jogo completo de Tower Defense em 3D desenvolvido com Three.js e JavaScript vanilla.
 
+Demo: https://mkazimoto.github.io/TowerDefenseCopilot/
+
 <img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/1181ff58-2bda-4dc7-8e5f-f7afedd281b1" />
 
 
